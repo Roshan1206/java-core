@@ -1,9 +1,6 @@
 package streams;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.TooManyListenersException;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class StreamsAPI {
@@ -22,12 +19,22 @@ public class StreamsAPI {
 		
 		List<Integer> evenList = squareOfNumbers.stream()
 				.filter(i->(i%2==0)).collect(Collectors.toList());
+
+		final List<String> skillSet1 = Arrays.asList("Java", "Spring", "SpringBoot");
+		final List<String> skillSet2 = Arrays.asList("HTML", "CSS", "Angular");
+		final List<String> skillSet3 = Arrays.asList("MySQL", "MongoDB", "PostgresSQL");
+
+		List<List<String>> skillsLists = Arrays.asList(skillSet1, skillSet2, skillSet3);
+		List<String> skillsList = skillsLists.stream().flatMap(Collection::stream).toList();
+		List<String> skillStartingWithS = skillsList.stream().filter(skill -> skill.startsWith("S")).toList();
 		
-		System.out.println(numbers);
-		System.out.println(sortedList);
-		System.out.println(distinctList);
-		System.out.println(squareOfNumbers);
-		System.out.println(evenList);
+//		System.out.println(numbers);
+//		System.out.println(sortedList);
+//		System.out.println(distinctList);
+//		System.out.println(squareOfNumbers);
+//		System.out.println(evenList);
+		System.out.println(skillsList);
+		System.out.println(skillStartingWithS);
 
 	}
 
