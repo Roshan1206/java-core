@@ -9,16 +9,16 @@ public class StreamsAPI {
 		List<Integer> numbers = Arrays.asList(1,5,3,8,4,7,5);
 		
 		List<Integer> sortedList = numbers.stream()
-				.sorted().collect(Collectors.toList());
+				.sorted().toList();
 		
 		List<Integer> distinctList = sortedList.stream()
-				.distinct().collect(Collectors.toList());
+				.distinct().toList();
 		
 		List<Integer> squareOfNumbers = distinctList.stream()
-				.map(x->x*x).collect(Collectors.toList());
+				.map(x->x*x).toList();
 		
 		List<Integer> evenList = squareOfNumbers.stream()
-				.filter(i->(i%2==0)).collect(Collectors.toList());
+				.filter(i->(i%2==0)).toList();
 
 		final List<String> skillSet1 = Arrays.asList("Java", "Spring", "SpringBoot");
 		final List<String> skillSet2 = Arrays.asList("HTML", "CSS", "Angular");
@@ -28,11 +28,11 @@ public class StreamsAPI {
 		List<String> skillsList = skillsLists.stream().flatMap(Collection::stream).toList();
 		List<String> skillStartingWithS = skillsList.stream().filter(skill -> skill.startsWith("S")).toList();
 		
-//		System.out.println(numbers);
-//		System.out.println(sortedList);
-//		System.out.println(distinctList);
-//		System.out.println(squareOfNumbers);
-//		System.out.println(evenList);
+		System.out.println(numbers);
+		System.out.println(sortedList);
+		System.out.println(distinctList);
+		System.out.println(squareOfNumbers);
+		System.out.println(evenList);
 		System.out.println(skillsList);
 		System.out.println(skillStartingWithS);
 
