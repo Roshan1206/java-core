@@ -1,4 +1,4 @@
-package dsa.arrays;
+package dsa.leetcode.arrays;
 
 //https://leetcode.com/problems/build-array-from-permutation/description/
 
