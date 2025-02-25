@@ -1,6 +1,6 @@
 package dsa.leetcode.arrays;
 
-public class Arrays {
+public class ArraysPractice {
     public static void main(String[] args) {
         int[] intArray = new int[7];
 
