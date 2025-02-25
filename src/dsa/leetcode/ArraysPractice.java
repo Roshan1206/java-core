@@ -1,4 +1,4 @@
-package dsa.leetcode.arrays;
+package dsa.leetcode;
 
 public class ArraysPractice {
     public static void main(String[] args) {
