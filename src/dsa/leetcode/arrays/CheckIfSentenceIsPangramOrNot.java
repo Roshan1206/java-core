@@ -1,5 +1,6 @@
 package dsa.leetcode.arrays;
 
+//https://leetcode.com/problems/check-if-the-sentence-is-pangram/submissions/1554546532/
 public class CheckIfSentenceIsPangramOrNot {
     public static void main(String[] args) {
         String sentence = "thequickbrownfoxjumpsoverthelazydog";
