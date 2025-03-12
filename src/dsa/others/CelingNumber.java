@@ -1,4 +1,4 @@
-package dsa.search;
+package dsa.others;
 
 //Given a sorted array return the target or the smallest number that is greater than target
 public class CelingNumber {
@@ -9,6 +9,10 @@ public class CelingNumber {
     }
 
     static int findCeilingNumber(int[] array, int target){
+        if(target > array[array.length - 1]){
+            return -1;
+        }
+
         int start = 0;
         int end = array.length-1;
 

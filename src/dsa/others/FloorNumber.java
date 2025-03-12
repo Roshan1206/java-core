@@ -1,4 +1,4 @@
-package dsa.search;
+package dsa.others;
 
 //Given a sorted array return the target or the greatest number that is smaller than target
 public class FloorNumber {

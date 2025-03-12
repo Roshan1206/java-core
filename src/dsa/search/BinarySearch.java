@@ -22,23 +22,26 @@ public class BinarySearch {
         int start = 0;
         int end = array.length - 1;
 
-        boolean isAsc = array[start] < array[end];
+        boolean isAscending = array[start] < array[end];
 
         while (start <= end){
-//          find the middle element. below one will work for large array size also
+//          Calculate the middle index in a way that avoids overflow
             int mid = start + (end-start)/2;
 
             if(target == array[mid]){
                 return mid;
             }
 
-            if(isAsc){
+            // Adjust search range based on the sorting order and target's value
+            if(isAscending){
+                // For ascending order arrays
                 if(target < array[mid]){
-                    end = mid-1;
-                } else{
-                    start = mid + 1;
+                    end = mid - 1;  // Narrow the search to the left half
+                } else {
+                    start = mid + 1;  // Narrow the search to the right half
                 }
             } else{
+                // For descending order arrays
                 if(target > array[mid]){
                     end = mid-1;
                 } else{
@@ -46,6 +49,7 @@ public class BinarySearch {
                 }
             }
         }
+        // Return -1 if the target is not found in the array
         return -1;
     }
 }
