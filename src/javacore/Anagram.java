@@ -12,14 +12,13 @@ class UserMainCodeAnagram{
 		ArrayList<String> splitStr1 = splitStringIntoArrayList(str1);
 		ArrayList<String> splitStr2 = splitStringIntoArrayList(str2);
 		ArrayList<String> newStrings = new ArrayList<String>();
-	
-		for (Iterator<String> iterator = splitStr1.iterator(); iterator.hasNext();) {
-			String string = (String) iterator.next();
-			if(splitStr2.contains(string)) {
-				splitStr2.remove(string);
-				newStrings.add(string);
-			}
-		}
+
+        for (String string : splitStr1) {
+            if (splitStr2.contains(string)) {
+                splitStr2.remove(string);
+                newStrings.add(string);
+            }
+        }
 		
 		String newString = String.join("", newStrings);
 		

@@ -19,5 +19,25 @@ public class Strings {
                 .mapToObj(c -> (char) c)
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
         System.out.println(charCount);
+
+        String checkPalindrone = "wow";
+        char[] charArray = checkPalindrone.toCharArray();
+        char[] charPalindrone = new char[charArray.length];
+        int start = 0;
+        int end = charArray.length - 1;
+
+        while (start <= end){
+            charPalindrone[start] = charArray[end];
+            charPalindrone[end] = charArray[start];
+            start++;
+            end--;
+        }
+
+        String reverseStr = String.valueOf(charPalindrone);
+        if(reverseStr.equals(checkPalindrone)){
+            System.out.println("Palindrome");
+        }else {
+            System.out.println("Not palindrome");
+        }
     }
 }

@@ -2,7 +2,7 @@ package javacore;
 
 import java.util.Scanner;
 
-class UserMainCodeAdjacentSwap {
+class  UserMainCodeAdjacentSwap {
 	public String swapPairs(String string) {
 		String swapedString = "";
 		for (int i = 0; i < string.length(); i = i + 2) {

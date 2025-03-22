@@ -7,7 +7,7 @@ class UserMainCodeArrayListManipulation{
 		int[] oddEvenList= new int[list1.length];
 		
 		for (int i = 0; i < list1.length; i++) {
-			if(i==0 || i%2==0) {
+			if(i % 2 == 0) {
 				oddEvenList[i] = list2[i];
 			}else {
 				oddEvenList[i] = list1[i];
